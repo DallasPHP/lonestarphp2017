@@ -1,0 +1,4 @@
+#sculpin_content_types:
+#    speakers:
+#        layout: speaker
+#        permalink: speaker/:slug_title/index.html

@@ -1,0 +1,30 @@
+---
+layout: default
+title: Sessions
+name: Sessions
+---
+{% block body %}
+    <section class="l-section">
+        <div class="container">
+            <h2 class="h-section">Sessions</h2>
+            {% for talk in site.opencfp.talks %}
+                <div class="session" id="{{ talk.slug }}">
+                    <h3 class="session__title">{{ talk.title }}</h3>
+                    <div class="session__body">
+                        <p>{{ talk.abstract|raw }}</p>
+                    </div>
+                    <div class="session__footer">
+                        {% for speaker in talk.speakers %}
+                            <a href="/speakers#{{ speaker.first_name|lower|replace({"'": ""}) }}-{{speaker.last_name|lower|replace({"'": ""}) }}" class="session__speaker">
+                                <img src="http://cfp.lonestarphp.com/uploads/{{ speaker.photo_path }}"><br>
+                                {{ speaker.first_name }} {{ speaker.last_name }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+{% block sponsors %}
+{% endblock %}

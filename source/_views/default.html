@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta property="og:image" content="http://lonestarphp.com/images/lonestarphp-logo.png"/>
+    <meta property="og:title" content="{% block fbtitle %}{{ block('title') }}{% endblock %}"/>
+    <meta property="og:description" content="{% block fbdesc %}The Lone Star PHP Conference brings together the best PHP speakers and topics to the DFW metroplex for an amazing, two-day event (April 7-9, 2016).{% endblock %}"/>
+    <meta property="og:site_name" content="Lone Star PHP Conference"/>
+
+    <title>{% block title %}{{ page.title }}{% endblock %} {% if page.name == 'Home' %} Lone Star PHP {% else %} | Lone Star PHP {% endif %}</title>
+
+    {% block head %}
+    <link rel="stylesheet" href="/assets/css/site.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Open+Sans+Condensed:700,300|Sanchez' rel='stylesheet' type='text/css'> -->
+    {% endblock %}
+</head>
+<body>
+    <div class="page-frame">
+        <div class="content-frame">
+            <nav class="off-canvas">
+                <ul class="nav nav--block nav--stacked">
+                    {% include "nav.html" %}
+                </ul>
+            </nav>
+            <nav class="nav-main z-structural">
+                <div class="grid grid--split grid--middle">
+                    <div class="grid__cell">
+                        <a href="/" class="nav-logo"><img src="/assets/img/lonestarphp-text-logo.png" alt="Lone Star PHP"></a>
+                    </div>
+                    <div class="grid__cell grid__cell--three-quarters palm-grid__cell--one-half text--right">
+                        <div class="nav-toggle">
+                            <button type="button" class="navbar-toggle">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <ul class="nav nav--block">
+                            {% include "nav.html" %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <header class="l-header">
+                <div class="l-header-overlay">
+                    <div class="container grid grid--gutters">
+                        <div class="grid__cell grid__cell--one-quarter palm-grid__cell--full lap-grid__cell--full"><a href="/"><img src="/assets/img/lonestarphp-logo.png"></a></div>
+                        <div class="grid__cell palm-grid__cell--full lap-grid__cell--full">
+                            <ul class="nav nav-social">
+                                <li><a href="https://twitter.com/lonestarphp" title="Twitter" target="_blank"><img src="/assets/img/twitter.svg" width="24" height="24" alt="Twitter"></a></li>
+                                <li><a href="https://www.facebook.com/lonestarconference" title="Facebook" target="_blank"><img src="/assets/img/facebook.svg" width="24" height="24" alt="Facebook"></a></li>
+                                <li><a href="https://www.flickr.com/photos/129013312@N07" title="Flickr" target="_blank"><img src="/assets/img/flickr.svg" width="24" height="24" alt="Flickr"></a></li>
+                            </ul>
+                            <h1 class="h-header">April 7 - 9, 2016 // Dallas, TX</h1>
+                            <h2 class="h-header h-header--alpha">Lone Star PHP</h2>
+                            <a href="https://ti.to/lone-star-php/lone-star-php-2016/" class="btn btn-basic btn--large btn--light btn--wide">Register Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            {% block body %}{% endblock %}
+            {% block sponsors %}
+            <section class="l-section">
+                <div class="container">
+                    <h1 class="h-section">Sponsors</h1>
+                    {% include "sponsors.html" %}
+                    <p>Thanks to the generous support of our sponsors year after year we're able to present this conference at minimal cost to our attendees, opening up attendance to many who could not normally  justify the cost of similar events. We couldn't do it without their support and we hope that this year you'll help us share this experience with the community. With the amazing feedback we receive each year from our attendees and sponsors we continue to improve our event to keep our place as the best php community conference around.</p>
+                    <p>In 2016, Lone Star PHP looks to build on its previous success. If you would like to be a part of making 2016 the best event yet. <a href="/assets/docs/LoneStarPHP_2016_Sponsorship_Prospectus.pdf">View the 2016 sponsor prospectus</a>.</p>
+                </div>
+            </section>
+            {% endblock %}
+            <footer class="l-footer l-section">
+                <div class="container grid grid--gutters">
+                        <div class="grid__cell grid__cell--one-half palm-grid__cell--full">
+                            <h6 class="h-footer">Social Media</h6>
+                            <ul class="nav nav--stacked nav--light">
+                                <li><a href="http://twitter.com/lonestarphp" target="_blank">Twitter</a></li>
+                                <li><a href="https://www.facebook.com/lonestarconference" target="_blank">Facebook</a></li>
+                                <li><a href="https://www.flickr.com/photos/129013312@N07" target="_blank">Flickr</a></li>
+                            </ul>
+                        </div>
+                        <div class="grid__cell grid__cell--one-half palm-grid__cell--full">
+                            <h6 class="h-footer">Additional Information</h6>
+                            <ul class="nav nav--stacked nav--light">
+                                <li><a href="/refund">Refund Policy</a></li>
+                                <li><a href="/code-conduct">Code of Conduct</a></li>
+                                <li><a href="/credits">Site Credits</a></li>
+                            </ul>
+                        </div>
+                        <div class="grid__cell copyright">
+                            Copyright &copy; 2011–2016 Lone Star PHP Conference &ndash; All Rights Reserved
+                        </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.navbar-toggle').on('click', function (e) {
+                $('.page-frame').toggleClass('active');
+                e.stopPropagation();
+                e.preventDefault();
+            });
+
+            $('.off-canvas').on('click', function(e) {
+                e.stopPropagation();
+            });
+
+            $('body').on('click', '.active .content-frame', function(e) {
+                $('.page-frame').removeClass('active');
+            });
+        });
+    </script>
+    <script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+    {% block javascript %}
+    {% endblock %}
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-246789-4']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</body>
+</html>

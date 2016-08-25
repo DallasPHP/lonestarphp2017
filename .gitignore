@@ -1,0 +1,10 @@
+/.sculpin
+/.idea
+/output_*
+/vendor
+.sass-cache
+node_modules
+
+*.pyc
+
+.capistrano

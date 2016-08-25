@@ -1,0 +1,93 @@
+---
+layout: default
+title: Venue
+name: Venue
+---
+{% block body %}
+<section class="l-section">
+    <div class="container grid grid--gutters">
+        <h2 class="h-section grid__cell--full">Venue</h2>
+        <div class="grid__cell grid__cell--one-half palm-grid__cell--full">
+            <img src="/assets/img/addison-conference-center.jpg" alt="Addison Conference Centre">
+        </div>
+        <div class="grid__cell grid__cell--one-half palm-grid__cell--full">
+            <p>This year the Lone Star PHP Conference is being held at
+            the Addison Conference Centre in Addison, TX from April 7th
+            &mdash; 9th. Conveniently located near the Dallas North
+            Tollway, the Centre includes the state of the art Addison
+            Theatre Centre, the award-winning Addison Conference Centre
+            and historic Stone Cottage.</p>
+
+            <p>For more information on the Addison Conference Centre and
+            surrounding area, <a href="http://www.addisontx.gov/departments/conf_theatre/" target="_blank" rel="external">go to their site</a>.</p>
+            <p>
+                <b>Addison Conference and Theatre Centre</b><br>
+                15650 Addison Rd,<br>
+                Addison, TX 75001
+            </p>
+        </div>
+        <div class="grid">
+            <div class="grid__cell grid__cell--one-half palm-grid__cell--full">
+                <h3>From DFW Airport</h3>
+                <ol>
+                    <li>Take 121 North out of the airport.</li>
+                    <li>Head east on 635 for about 14 miles.</li>
+                    <li>Take exit 22c onto Dallas North Tollway heading north.</li>
+                    <li>Exit Belt Line Rd/Arapaho Rd.</li>
+                    <li>Turn left on Arapaho. Then turn right on Quorum Dr.</li>
+                    <li>Follow the circle and go west on Addison Circle.</li>
+                </ol>
+            </div>
+            <div class="grid__cell grid__cell--one-half palm-grid__cell--full">
+                <h3>From Love Field Airport</h3>
+                <ol>
+                    <li>Turn left out of the airport, heading east on Mockingbird Ln.</li>
+                    <li>Merge onto North Dallas Tollway heading north for 10 miles.</li>
+                    <li>Exit Belt Line Rd/Arapaho Rd.</li>
+                    <li>Turn left on Arapaho. Then turn right on Quorum Dr.</li>
+                    <li>Follow the circle and go west on Addison Circle.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="container grid grid--gutters">
+        <h2 class="h-section grid__cell--full">Suggested Hotels</h2>
+        <p class="grid__cell--full">
+            The following is a list of suggested hotels within easy walking distance of our conference venue.
+            Because we do not have an official hotel partner we cannot offer group discount codes.
+        </p>
+        <div class="grid__cell  palm-grid__cell--full">
+            <h3>Hyatt House*</h3>
+            <address>4900 Edwin Lewis Drive<br>Addison, TX 75001</address>
+            <p>1-972-661-3113</p>
+            <a href="http://addison.house.hyatt.com/en/hotel/home.html" target="_blank">Website</a>
+        </div>
+        <div class="grid__cell  palm-grid__cell--full">
+            <h3>Radisson North Addison</h3>
+            <address>4960 Arapaho Road<br>Addison, TX 75001</address>
+            <p>1-972-490-1212</p>
+            <a href="http://hotels.radisson.com/tx/addison/hotels_addison_tx_usadntx.html" target="_blank">Website</a>
+        </div>
+        <div class="grid__cell palm-grid__cell--full">
+            <h3>Springhill Suites</h3>
+            <address>15255 Quorum Dr.<br>Addison, TX 75001</address>
+            <p>1-972-774-1010</p>
+            <a href="http://www.marriott.com/hotels/travel/dalsh-springhill-suites-dallas-addison-quorum-drive/" target="_blank">Website</a>
+        </div>
+    </div>
+
+    <br>
+    <div class="container grid grid--gutters">
+        <p class="grid__cell--full"><small>
+            * Hyatt House will provide the best price and could be considered the "main" hotel.
+        </small></p>
+    </div>
+    <br>
+    <div class="l-map" id="map"></div>
+</section>
+{% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="/assets/js/map.js"></script>
+{% endblock %}
