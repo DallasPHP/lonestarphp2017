@@ -1,6 +1,6 @@
-# Lone Star PHP 2015
+# Lone Star PHP 2017
 
-Welcome to the Lone Star PHP 2015 website, based on [Sculpin](http://sculpin.io/)! Definitely check up on the Sculpin
+Welcome to the Lone Star PHP 2017 website, based on [Sculpin](http://sculpin.io/)! Definitely check up on the Sculpin
 documentation to learn more about working with Sculpin
 
 ## Getting Started
