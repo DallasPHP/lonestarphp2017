@@ -1,5 +1,6 @@
 .pricing {
   border: 1px solid darken(#dedfdd, 5%);
+  position: relative;
 }
 .pricing--highlight {
   border-color: #d52d2e;
@@ -52,4 +53,17 @@
   text-decoration: none;
   text-transform: uppercase;
   &:hover { color: #fff; }
+}
+
+.pricing--early-bird:after {
+  background: #d52d2e;
+  border-radius: 6px;
+  color: #fff;
+  content: 'Early Bird!';
+  display: block;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  width: 6rem;
+  padding: 0.25rem 0.5rem;
 }
