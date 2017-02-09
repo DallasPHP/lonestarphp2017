@@ -9,7 +9,7 @@ name: Speakers
             <h2 class="h-section">Speakers</h2>
             {% for speaker in site.opencfp.speakers %}
                 <div class="grid speaker" id="{{ speaker.first_name|lower|replace({"'": ""}) }}-{{speaker.last_name|lower|replace({"'": ""}) }}">
-                    <img src="http://cfp.lonestarphp.com/uploads/{{ speaker.photo_path }}" class="speaker__photo grid__cell">
+                    <img src="{{ speaker.photo_path }}" class="speaker__photo grid__cell">
                     <div class="speaker__body grid__cell grid__cell--three-quarters palm-grid__cell--full">
                         <h3 class="h-speaker">{{ speaker.first_name }} {{ speaker.last_name }}</h3>
                         <p>{{ speaker.bio|raw }}</p>

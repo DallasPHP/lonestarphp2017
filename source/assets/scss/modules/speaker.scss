@@ -69,7 +69,7 @@
 }
 .speaker-flex > figure {
   transition: all 0.25s ease-in-out;
-  display: inline-block;
+  display: flex;
   position: relative;
   left: 0;
   bottom: 0;
