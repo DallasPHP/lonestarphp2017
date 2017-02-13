@@ -16,7 +16,7 @@ name: Sessions
                     <div class="session__footer">
                         {% for speaker in talk.speakers %}
                             <a href="/speakers#{{ speaker.first_name|lower|replace({"'": ""}) }}-{{speaker.last_name|lower|replace({"'": ""}) }}" class="session__speaker">
-                                <img src="http://cfp.lonestarphp.com/uploads/{{ speaker.photo_path }}"><br>
+                                <img src="{{ speaker.photo_path }}"><br>
                                 {{ speaker.first_name }} {{ speaker.last_name }}
                             </a>
                         {% endfor %}

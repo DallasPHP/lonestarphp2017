@@ -32,6 +32,12 @@ $juniper: #ba2e53;
   margin: 0.5rem 0;
   display: block;
 }
+.schedule-speaker {
+  display: inline-block;
+  @include media-query(palm) {
+      display: block;
+  }
+}
 .schedule-talk > a {
   color: #333;
   text-decoration: none;
