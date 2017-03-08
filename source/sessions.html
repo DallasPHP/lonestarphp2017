@@ -9,7 +9,7 @@ name: Sessions
             <h2 class="h-section">Sessions</h2>
             {% for talk in site.opencfp.talks %}
                 <div class="session" id="{{ talk.slug }}">
-                    <h3 class="session__title">{{ talk.title }}</h3>
+                    <h3 class="session__title">{{ talk.title|raw }}</h3>
                     <div class="session__body">
                         <p>{{ talk.abstract|raw }}</p>
                     </div>
