@@ -15,7 +15,7 @@ name: Speakers
                         <p>{{ speaker.bio|raw }}</p>
                         <h4 class="h-speaker">Sessions</h4>
                         {% for talk in speaker.talks %}
-                            <a href="/sessions#{{ talk.slug }}">{{ talk.title }}</a><br>
+                            <a href="/sessions#{{ talk.slug }}">{{ talk.title|raw }}</a><br>
                         {% endfor %}
                     </div>
                     <div class="speaker__footer"></div>
